@@ -538,6 +538,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4463895010634113322, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e561a3c866c383d40bfb2ce5d4c34105, type: 2}
     - target: {fileID: 919132149155446097, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
       propertyPath: m_Name
       value: sharpsafe_box (6)
@@ -673,6 +677,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4463895010634113322, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e561a3c866c383d40bfb2ce5d4c34105, type: 2}
     - target: {fileID: 919132149155446097, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
       propertyPath: m_Name
       value: sharpsafe_box (4)
@@ -1445,6 +1453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4463895010634113322, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e561a3c866c383d40bfb2ce5d4c34105, type: 2}
     - target: {fileID: 919132149155446097, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
       propertyPath: m_Name
       value: sharpsafe_box (2)
@@ -3863,6 +3875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4463895010634113322, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e561a3c866c383d40bfb2ce5d4c34105, type: 2}
     - target: {fileID: 919132149155446097, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
       propertyPath: m_Name
       value: sharpsafe_box (5)
@@ -3931,6 +3947,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4463895010634113322, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e561a3c866c383d40bfb2ce5d4c34105, type: 2}
     - target: {fileID: 919132149155446097, guid: 72de31bb42a552c4c86af0f0dbb9fcd2, type: 3}
       propertyPath: m_Name
       value: sharpsafe_box (3)
