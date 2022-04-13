@@ -10,11 +10,14 @@ public class Desk : MonoBehaviour
     //basicMat is the normal material of the desk. Return to this material after a while
     public Material rightMat, wrongMat, basicMat;
     //indicator is the desk component that changes color. 
-    public GameObject indicator;
+    public GameObject indicator, collidedObject;
     //this can be used to set the time how long it takes for the indicator to turn back into the normal material
     public int waitTime = 5;
 
-
+    private void Start()
+    {
+        collidedObject = null;
+    }
     //keeping it simple: checks if the tag is set to correct one and changes material to correct one. After both it starts the MatCountDown coroutine
     //which waits for set amount of time (waitTime) until it changes the material back to basic. 
     private void OnTriggerEnter(Collider other)
@@ -27,12 +30,17 @@ public class Desk : MonoBehaviour
         if(other.tag == "Wrong")
         {
             indicator.GetComponent<MeshRenderer>().material = wrongMat;
+            collidedObject = other.gameObject;
             StartCoroutine(MatCountDown(waitTime));
         }
     }
     private void ChangeMaterialBack()
     {
         indicator.GetComponent<MeshRenderer>().material = basicMat;
+        if(collidedObject != null)
+        {
+            Destroy(collidedObject);
+        }
     }
     
     private IEnumerator MatCountDown(int seconds)
