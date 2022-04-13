@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a98b5c42a1bb2364089e9a768f53e6ed
+guid: 9fad6abd43c5bf14a837f33574b9ad0f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: c24b3cbd453112948b7e7f9897c78d21, type: 2}
+      name: gensumycin_box
+    second: {fileID: 2100000, guid: 5881383cbb29a6544ad0666d5adb2bf7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
