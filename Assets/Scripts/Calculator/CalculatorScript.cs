@@ -12,6 +12,7 @@ public class CalculatorScript : MonoBehaviour
     public bool operatorPressed = false;
     public bool firstOperatorUsed = false;
     public bool secondOperatorUsed = false;
+    public bool checkResult = false;
     public string currentInput;
     public string selectedOperator;
     public float correctAnswer;
@@ -75,15 +76,18 @@ public class CalculatorScript : MonoBehaviour
             {
                 case "+":   
                     result = input + input2;
-                    ResultCheck();
+                    checkResult = true;
+                    //ResultCheck();
                     break;
                 case "*":
                     result = input * input2;
-                    ResultCheck();
+                    checkResult = true;
+                   // ResultCheck();
                     break;
                 case "/":
                     result = input / input2;
-                    ResultCheck();
+                    checkResult = true;
+                  //ResultCheck();
                     break;      
             }
             //saves for next time
@@ -91,6 +95,8 @@ public class CalculatorScript : MonoBehaviour
             Debug.Log(result);
         }
     }
+
+    //moved this to screencontroller. just because I dont want to worry about references :D
     public void ResultCheck()
     {
         if(result == correctAnswer)
