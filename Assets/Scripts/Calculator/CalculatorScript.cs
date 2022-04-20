@@ -13,6 +13,7 @@ public class CalculatorScript : MonoBehaviour
     public bool firstOperatorUsed = false;
     [SerializeField] private string currentInput;
     [SerializeField] private string selectedOperator;
+    public float correctAnswer;
     
     private void Awake()
     {
@@ -72,17 +73,38 @@ public class CalculatorScript : MonoBehaviour
             {
                 case "+":   
                     result = input + input2;
+                    ResultCheck();
                     break;
                 case "*":
                     result = input * input2;
+                    ResultCheck();
                     break;
                 case "/":
                     result = input / input2;
+                    ResultCheck();
                     break;      
             }
             //saves for next time
             input = result;
             Debug.Log(result);
+        }
+    }
+    public void ResultCheck()
+    {
+        if(result == correctAnswer)
+        {
+            Debug.Log("Good job you solved the problem ou jee");
+        }
+        if(result != correctAnswer)
+        {
+            if(result > correctAnswer)
+            {
+                Debug.Log("Your result is too much. Calculate again");
+            }
+            if(result < correctAnswer)
+            {
+                Debug.Log("Your answer is not enough. Try calculating again!");
+            }           
         }
     }
     //clears the whole calculator
