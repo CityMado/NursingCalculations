@@ -746,7 +746,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999998, z: 0.020189406}
+  m_Size: {x: 0.01, y: 0.01, z: 0.020189406}
   m_Center: {x: -0.00053470023, y: 0.00026054398, z: -0.01237432}
 --- !u!65 &263909463
 BoxCollider:
@@ -759,7 +759,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12855227, y: 0.030773917, z: 0.023596209}
+  m_Size: {x: 0.06, y: 0.02, z: 0.023596209}
   m_Center: {x: -0.00262221, y: 0.00092378305, z: -0.0038404302}
 --- !u!65 &263909464
 BoxCollider:
@@ -772,7 +772,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19373588, y: 0.04839649, z: 0.02465728}
+  m_Size: {x: 0.1, y: 0.03, z: 0.02465728}
   m_Center: {x: -0.01523076, y: 0.00034929716, z: -0.0028244741}
 --- !u!65 &263909465
 BoxCollider:
@@ -785,7 +785,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14457725, y: 0.03377143, z: 0.02713117}
+  m_Size: {x: 0.1, y: 0.02, z: 0.02713117}
   m_Center: {x: -0.0061834008, y: -0.0020535728, z: -0.008123723}
 --- !u!65 &263909466
 BoxCollider:
@@ -798,7 +798,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020000001, y: 0.020000001, z: 0.020359833}
+  m_Size: {x: 0.012, y: 0.012, z: 0.020359833}
   m_Center: {x: -0.000008065264, y: 0.0008738088, z: -0.018882738}
 --- !u!65 &263909467
 BoxCollider:
@@ -811,7 +811,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.020304168}
+  m_Size: {x: 0.012, y: 0.012, z: 0.020304168}
   m_Center: {x: -0.0011096643, y: -0.00097547926, z: -0.0098479455}
 --- !u!65 &263909468
 BoxCollider:
@@ -824,7 +824,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999998, z: 0.021808296}
+  m_Size: {x: 0.012, y: 0.012, z: 0.021808296}
   m_Center: {x: 0.00058951415, y: -0.00010248645, z: 0.012453068}
 --- !u!65 &263909469
 BoxCollider:
@@ -837,7 +837,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05024152, y: 0.050241508, z: 14.427035}
+  m_Size: {x: 0.012, y: 0.012, z: 14.427035}
   m_Center: {x: -0.001342414, y: -0.0022138401, z: -7.358373}
 --- !u!65 &263909470
 BoxCollider:
@@ -850,7 +850,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21972993, y: 0.062287766, z: 0.025539653}
+  m_Size: {x: 0.12, y: 0.05, z: 0.025539653}
   m_Center: {x: 0.0016164999, y: 0.0016475682, z: -0.0077289706}
 --- !u!65 &263909471
 BoxCollider:
@@ -863,7 +863,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019999998, y: 0.019999996, z: 0.020183532}
+  m_Size: {x: 0.012, y: 0.012, z: 0.020183532}
   m_Center: {x: -0.0010027867, y: 0.00015047843, z: 0.0016861731}
 --- !u!65 &263909472
 BoxCollider:
@@ -876,7 +876,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020000003, y: 0.019999998, z: 0.021140538}
+  m_Size: {x: 0.012, y: 0.012, z: 0.021140538}
   m_Center: {x: -0.00065124454, y: -0.0007339277, z: -0.009429597}
 --- !u!65 &263909473
 BoxCollider:
@@ -889,7 +889,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.046687786, y: 0.2105827, z: 0.023227297}
+  m_Size: {x: 0.05, y: 0.1, z: 0.023227297}
   m_Center: {x: 0.0028866054, y: 0.0050766757, z: 0.012661682}
 --- !u!65 &263909474
 BoxCollider:
@@ -902,7 +902,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999998, z: 0.02035983}
+  m_Size: {x: 0.012, y: 0.012, z: 0.02035983}
   m_Center: {x: -0.00014751777, y: -0.000073278316, z: -0.009727996}
 --- !u!65 &263909475
 BoxCollider:
@@ -915,7 +915,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.020500576}
+  m_Size: {x: 0.012, y: 0.012, z: 0.020500576}
   m_Center: {x: -0.0012292005, y: -0.00022237652, z: -0.009498859}
 --- !u!65 &263909476
 BoxCollider:
@@ -928,7 +928,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999998, z: 0.0222206}
+  m_Size: {x: 0.012, y: 0.012, z: 0.0222206}
   m_Center: {x: -0.00041500293, y: 0.001141128, z: -0.012838339}
 --- !u!54 &263909522
 Rigidbody:
@@ -945,7 +945,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909523
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -961,7 +961,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909525
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1009,7 +1009,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909527
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909529
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909530
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1089,7 +1089,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909533
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1137,7 +1137,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1153,7 +1153,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &263909536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1169,7 +1169,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &313839763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1654,10 @@ PrefabInstance:
       propertyPath: _interactorDrivers.Array.data[0]
       value: 
       objectReference: {fileID: 1623253443}
+    - target: {fileID: 2631286398791546706, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3730632290436700508, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
       propertyPath: _ovrCameraRig
       value: 
@@ -1666,6 +1670,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5ba7d209f622bb44e87b47ce27ee27b7, type: 2}
+    - target: {fileID: 5311219244866347525, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5522399422848433238, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
       propertyPath: _enableUpdate
       value: 0
@@ -1718,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6610959570394761621, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6624182433218118422, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
       propertyPath: _interactorDrivers.Array.size
       value: 1
@@ -1742,9 +1754,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5ba7d209f622bb44e87b47ce27ee27b7, type: 2}
+    - target: {fileID: 7492948280346023700, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8212122235371924907, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8910374460335824435, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8975877624002463995, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
       propertyPath: m_Enabled
@@ -2021,6 +2041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandGrabInteractor
       objectReference: {fileID: 0}
+    - target: {fileID: 3282029263655771837, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8553364197529364881, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2038,6 +2062,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845363489}
     m_Modifications:
+    - target: {fileID: 479229218, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487736799, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 206931871687596337, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3282029262929392829, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3282029263655771826, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2086,11 +2126,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandGrabInteractor
       objectReference: {fileID: 0}
+    - target: {fileID: 3282029263655771837, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274135674856270696, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524685080250502911, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8646129326984794350, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: _hand
       value: 
       objectReference: {fileID: 340084780}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2729420837077267871, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
 --- !u!1 &1399583176
 GameObject:
@@ -2922,7 +2975,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &19627710723096740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,7 +3347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149284064614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.318, y: 1.11, z: 0.489}
+  m_LocalPosition: {x: -0.2302, y: 1.11, z: 0.284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4886456258614631569}
