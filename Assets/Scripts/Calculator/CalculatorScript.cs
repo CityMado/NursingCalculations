@@ -6,13 +6,14 @@ using System;
 public class CalculatorScript : MonoBehaviour
 {
     public static CalculatorScript singleton;
-    [SerializeField] private float input, input2;
-    [SerializeField] private float result;
+    public float input, input2;
+    public float result;
     [SerializeField] private string operation;
     public bool operatorPressed = false;
     public bool firstOperatorUsed = false;
-    [SerializeField] private string currentInput;
-    [SerializeField] private string selectedOperator;
+    public bool secondOperatorUsed = false;
+    public string currentInput;
+    public string selectedOperator;
     public float correctAnswer;
     
     private void Awake()
@@ -67,6 +68,7 @@ public class CalculatorScript : MonoBehaviour
         }
         if(currentCharacter == "=")
         {
+            secondOperatorUsed = true;
             input2 = Convert.ToInt32(currentInput);
             currentInput = null; 
             switch (selectedOperator)
@@ -118,5 +120,6 @@ public class CalculatorScript : MonoBehaviour
         firstOperatorUsed = false;
         currentInput = null;
         selectedOperator = null;
+        secondOperatorUsed = false;
     }
 }
