@@ -92,6 +92,15 @@ public class CalculatorScript : MonoBehaviour
             }
             //saves for next time
             input = result;
+            currentInput = result.ToString();
+            input2 = 0;
+            operation = null;
+            operatorPressed = false;
+            firstOperatorUsed = false;
+ 
+            selectedOperator = null;
+            secondOperatorUsed = false;
+            Debug.Log(input);
             Debug.Log(result);
         }
     }

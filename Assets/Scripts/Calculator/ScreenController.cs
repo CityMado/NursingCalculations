@@ -28,7 +28,7 @@ public class ScreenController : MonoBehaviour
         if(!CalculatorScript.singleton.firstOperatorUsed && !CalculatorScript.singleton.checkResult)
         {
             inputUp.text = CalculatorScript.singleton.currentInput;
-            result.text = null;
+            //result.text = null;
         }
     }
     public void SaveText()
@@ -53,7 +53,7 @@ public class ScreenController : MonoBehaviour
         {
             feedback.text = "You got the correct answer";
             inputUp.text = null;
-            result.text = null;
+            result.text = CalculatorScript.singleton.result.ToString();
             StartCoroutine(AutomaticScreenClear(waitTime));
 
         }
@@ -62,15 +62,15 @@ public class ScreenController : MonoBehaviour
             if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctAnswer)
             {
                 feedback.text = "Answer is more than needed";
-                inputUp.text = null;
-                result.text = null;
+                inputUp.text = null;      
+                result.text = CalculatorScript.singleton.result.ToString();          
                 StartCoroutine(AutomaticScreenClear(waitTime));
             }
             if(CalculatorScript.singleton.result < CalculatorScript.singleton.correctAnswer)
             {
                 feedback.text = "Answer is less than needed";
                 inputUp.text = null;
-                result.text = null;
+                result.text = CalculatorScript.singleton.result.ToString();
                 StartCoroutine(AutomaticScreenClear(waitTime));
             }           
         }
@@ -85,6 +85,7 @@ public class ScreenController : MonoBehaviour
                 yield return new WaitForSeconds(1);
                 counter--;
             }
+             CalculatorScript.singleton.result = 0;
              CalculatorScript.singleton.checkResult = false;
         }
     }
