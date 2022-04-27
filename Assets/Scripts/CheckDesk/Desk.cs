@@ -13,16 +13,10 @@ public class Desk : MonoBehaviour
     public GameObject indicator, collidedObject;
     //this can be used to set the time how long it takes for the indicator to turn back into the normal material
     public int waitTime = 5;
-    // Ampulle GameObject
-    public GameObject Ampulle;
-    
-    
+
     private void Start()
     {
         collidedObject = null;
-        
-        //ampulle isnot active when the game starts // add the object in the unity
-        Ampulle.SetActive(false);
     }
     //keeping it simple: checks if the tag is set to correct one and changes material to correct one. After both it starts the MatCountDown coroutine
     //which waits for set amount of time (waitTime) until it changes the material back to basic. 
@@ -32,7 +26,6 @@ public class Desk : MonoBehaviour
         {
             indicator.GetComponent<MeshRenderer>().material = rightMat;
             StartCoroutine(MatCountDown(waitTime));
-            Ampulle.SetActive(true);
         }
         if(other.tag == "Wrong")
         {
