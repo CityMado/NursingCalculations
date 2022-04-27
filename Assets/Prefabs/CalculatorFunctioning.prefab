@@ -1436,7 +1436,7 @@ MonoBehaviour:
   feedback: {fileID: 4422823255218636384}
   savedFirstInput: 
   savedOperator: 
-  waitTime: 0.5
+  waitTime: 2
 --- !u!1 &4422823255159906171
 GameObject:
   m_ObjectHideFlags: 0
