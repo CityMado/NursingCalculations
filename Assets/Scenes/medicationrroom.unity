@@ -746,6 +746,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ampulle1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a43b5730736656b40a057ab03cc6ca72, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a43b5730736656b40a057ab03cc6ca72, type: 3}
+      propertyPath: m_TagString
+      value: ampulle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a43b5730736656b40a057ab03cc6ca72, type: 3}
 --- !u!1 &436762773 stripped
@@ -860,7 +868,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4711208715938537054, guid: a43b5730736656b40a057ab03cc6ca72, type: 3}
-<<<<<<< HEAD
 --- !u!114 &436762782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,8 +890,6 @@ MonoBehaviour:
   Ampulle: {fileID: 436762773}
 =======
 >>>>>>> 1637d68a4196766517377cd793527229f09ee9ec
-=======
->>>>>>> parent of ec646c3 (Audio Files Added)
 --- !u!4 &447276864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4484591312116288, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
@@ -929,7 +934,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1856,14 +1861,11 @@ GameObject:
   - component: {fileID: 1073381960}
   - component: {fileID: 1073381959}
 <<<<<<< HEAD
-<<<<<<< HEAD
   - component: {fileID: 1073381965}
   - component: {fileID: 1073381964}
 =======
 >>>>>>> 1637d68a4196766517377cd793527229f09ee9ec
   - component: {fileID: 1073381963}
-=======
->>>>>>> parent of ec646c3 (Audio Files Added)
   m_Layer: 0
   m_Name: s
   m_TagString: Untagged
@@ -1947,7 +1949,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 180.166, z: 0}
-<<<<<<< HEAD
 --- !u!54 &1073381963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2096,8 +2097,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e2eedbf66f20644ab5fff58ca106a1f, type: 3}
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of ec646c3 (Audio Files Added)
 --- !u!4 &1177611876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8716261433392699165, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
@@ -2237,7 +2236,6 @@ PrefabInstance:
       objectReference: {fileID: 235594738}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc242319e5f2bd842999ab7665ad2d78, type: 3}
-<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1298540008 stripped
 GameObject:
@@ -2385,8 +2383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of ec646c3 (Audio Files Added)
 --- !u!1001 &1404665154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2945,7 +2941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1588834228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4048,6 +4044,18 @@ MeshRenderer:
     - target: {fileID: 8716261433392699166, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
       propertyPath: m_Name
       value: nursingroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186455841864137585, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186455841864137585, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186455841864137585, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.282
       objectReference: {fileID: 0}
     - target: {fileID: 9186455842683517373, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5190,7 +5198,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _relativeTo: {fileID: 8716261433419778821}
-  _rigidbody: {fileID: 8716261433419778845}
+  _rigidbody: {fileID: 8716261433419778841}
   _releaseDistance: 0
   _physicsObject: {fileID: 0}
   _scoringModifier:
@@ -5278,7 +5286,7 @@ PrefabInstance:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
