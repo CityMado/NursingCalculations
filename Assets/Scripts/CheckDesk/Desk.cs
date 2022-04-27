@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
+    public static Desk singleton;
     //desk collider is the collider that detects which item is placed on the desk. 
     public Collider deskCollider;
     //these are materials that are used for the indicator. if the answer is correct material changes to rightMat and if it's wrong it changes to wrongMat.
@@ -15,8 +16,12 @@ public class Desk : MonoBehaviour
     public int waitTime = 5;
     // Ampulle GameObject
     public GameObject Ampulle;
+    public bool correctMedicine, wrongMedicine;
     
-    
+    private void Awake()
+    {
+        singleton = this;
+    }
     private void Start()
     {
         collidedObject = null;
@@ -32,6 +37,8 @@ public class Desk : MonoBehaviour
         {
             indicator.GetComponent<MeshRenderer>().material = rightMat;
             StartCoroutine(MatCountDown(waitTime));
+            correctMedicine = true;
+            wrongMedicine = false;
             Ampulle.SetActive(true);
         }
         if(other.tag == "Wrong")
@@ -39,6 +46,8 @@ public class Desk : MonoBehaviour
             indicator.GetComponent<MeshRenderer>().material = wrongMat;
             collidedObject = other.gameObject;
             StartCoroutine(MatCountDown(waitTime));
+            correctMedicine = false;
+            wrongMedicine = true;
         }
     }
     private void ChangeMaterialBack()
