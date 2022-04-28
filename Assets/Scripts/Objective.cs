@@ -9,7 +9,6 @@ public class Objective : MonoBehaviour
     [SerializeField] private RestartLevel restartLevel;
     public bool isCompleted, currentObjective, objectiveFailed;
     public bool playerCanTry = true;
-    //private float percentage, angle;
     public string title, description;
     public int playerTries = 3;
 
