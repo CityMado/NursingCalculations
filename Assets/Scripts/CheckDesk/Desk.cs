@@ -39,7 +39,6 @@ public class Desk : MonoBehaviour
             StartCoroutine(MatCountDown(waitTime));
             correctMedicine = true;
             wrongMedicine = false;
-            Ampulle.SetActive(true);
         }
         if(other.tag == "Wrong")
         {

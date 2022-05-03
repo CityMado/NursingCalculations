@@ -12,6 +12,11 @@ public class PlayerObjectiveManager : MonoBehaviour
     //public TextMeshProUGUI objDescription;
     [SerializeField] private bool  objectivesCompleted;
 
+
+    private void Update()
+    {
+        AreObjectivesCompleted();
+    }
     private bool AreObjectivesCompleted()
     {
         for (int i = 0; i < objectives.Length; ++i){

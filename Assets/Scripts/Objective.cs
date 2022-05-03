@@ -38,6 +38,7 @@ public class Objective : MonoBehaviour
                 if(Desk.singleton.correctMedicine && playerCanTry)
                 {
                     isCompleted = true;
+                    Desk.singleton.Ampulle.SetActive(true);
                 }
                 if(Desk.singleton.wrongMedicine && playerCanTry)
                 {
