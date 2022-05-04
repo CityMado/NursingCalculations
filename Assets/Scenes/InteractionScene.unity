@@ -1287,12 +1287,12 @@ MonoBehaviour:
       m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 
+      m_Id: 7824cfb9-7f68-44ab-8f90-e60f7c9f7d65
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: d6286fcb-a29f-4ad2-b0f3-4a5c4d245398
         m_Path: <XRHMD>/centerEyePosition
         m_Interactions: 
         m_Processors: 
@@ -1315,12 +1315,12 @@ MonoBehaviour:
       m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 
+      m_Id: d0cd4aae-0d5c-419a-b16c-9e38a11b01cb
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: 3244adf1-d296-4563-8fda-1fe02a20a7ae
         m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
