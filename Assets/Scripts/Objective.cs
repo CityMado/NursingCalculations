@@ -65,6 +65,7 @@ public class Objective : MonoBehaviour
                         audioSource.PlayOneShot(voiceOver);
                     }
                 }
+                /*
                if(CalculatorScript.singleton.result < CalculatorScript.singleton.correctAnswer)
                 {
                     isCompleted = false;
@@ -73,6 +74,7 @@ public class Objective : MonoBehaviour
                         audioSource.PlayOneShot(wrongSound);
                     }
                 }
+                */
                 break;
             case ObjectiveType.BreakAmpulle:
                 if(AmpulleScript.singleton.isBroken)
