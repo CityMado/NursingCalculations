@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowel}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowel, DestroyAmpulle}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -86,6 +86,15 @@ public class Objective : MonoBehaviour
             case ObjectiveType.UseTowel:
             {
                 if(TowelScript.singleton.hasCleaned)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            }
+            case ObjectiveType.DestroyAmpulle:
+            {
+                if(YellowBox.singleton.ampulleDestroyed)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
