@@ -26,9 +26,9 @@ public class Disinfectant : MonoBehaviour
         {
             //Instantiate(SpawnItem, spawnPos, SpawnItem.transform.rotation);
             Invoke("SpawnWater", 0.1f);
-            Destroy(SpawnItem, 5);
+            //Destroy(SpawnItem, 5);
 
-            Invoke("DestroyObjectDelayed", 0.1f);
+           //Invoke("DestroyObjectDelayed", 0.1f);
             //InvokeRepeating("SpawnWater", startDelay, repeatRate);
 
 
@@ -56,9 +56,6 @@ public class Disinfectant : MonoBehaviour
            i++;
            
         }
-        
-
-
 
     }
 }
