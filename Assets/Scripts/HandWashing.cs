@@ -14,10 +14,10 @@ public class HandWashing : MonoBehaviour
             switch (handSide)
             {
                 case HandSide.Right:
-                    CheckBothHands.singleton.rightHandWashed = true;
+                    MultipleObjectiveChecker.singleton.rightHandWashed = true;
                     break;
                 case HandSide.Left:
-                    CheckBothHands.singleton.leftHandWashed = true;
+                    MultipleObjectiveChecker.singleton.leftHandWashed = true;
                     break;
             }
             

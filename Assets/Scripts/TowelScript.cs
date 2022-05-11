@@ -4,22 +4,41 @@ using UnityEngine;
 
 public class TowelScript : MonoBehaviour
 {
-    //not sure how much is going to come here but we will see.
-public static TowelScript singleton;
-public bool hasCleaned = false;
-private void Awake()
-{
-    singleton = this;
-}
+
+public enum SubObjective {Desk, Ampulle}
+public SubObjective subObjective;
+
 private void Start()
 {
-    gameObject.SetActive(false);
+    if(subObjective == SubObjective.Ampulle)
+    {
+        gameObject.SetActive(false);
+    }
 }
- private void OnTriggerEnter(Collider other) {
-        
-        if(other.tag == "ampulle")
+ private void OnTriggerEnter(Collider other) 
+    {
+        switch (subObjective)
         {
-            hasCleaned = true;
+            case SubObjective.Desk:
+            {
+                    if(other.tag == "Desk")
+                    {
+                        MultipleObjectiveChecker.singleton.hasCleanedTable = true;
+                        //Destroy(gameObject, 5);
+                    }
+            }
+                break;
+            case SubObjective.Ampulle:
+                {
+                    if(other.tag == "ampulle")
+                    {
+                        MultipleObjectiveChecker.singleton.hasCleanedAmpulle = true;
+                       // Destroy(gameObject, 5);
+                    }
+                }
+                break;
         }
+            
+
     }
 }

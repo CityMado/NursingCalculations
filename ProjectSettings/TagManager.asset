@@ -9,6 +9,7 @@ TagManager:
   - ampulle
   - Towel
   - Disinfectant
+  - Desk
   layers:
   - Default
   - TransparentFX

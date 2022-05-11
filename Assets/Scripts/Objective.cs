@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowel, DestroyAmpulle, WashHands}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -41,7 +41,7 @@ public class Objective : MonoBehaviour
                 {
                     isCompleted = true;
                     Desk.singleton.Ampulle.SetActive(true);
-                    TowelScript.singleton.gameObject.SetActive(true);
+                    Desk.singleton.towel.SetActive(true);
                     audioSource.PlayOneShot(correctSound);
                 }
                 if(Desk.singleton.wrongMedicine && playerCanTry)
@@ -83,9 +83,18 @@ public class Objective : MonoBehaviour
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
-            case ObjectiveType.UseTowel:
+            case ObjectiveType.UseTowelOnAmpule:
             {
-                if(TowelScript.singleton.hasCleaned)
+                if(MultipleObjectiveChecker.singleton.hasCleanedAmpulle)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            }
+            case ObjectiveType.UseTowelOnDesk:
+            {
+                if(MultipleObjectiveChecker.singleton.hasCleanedTable)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -103,7 +112,7 @@ public class Objective : MonoBehaviour
             }
             case ObjectiveType.WashHands:
                 
-                if(CheckBothHands.singleton.rightHandWashed && CheckBothHands.singleton.leftHandWashed)
+                if(MultipleObjectiveChecker.singleton.rightHandWashed && MultipleObjectiveChecker.singleton.leftHandWashed)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);

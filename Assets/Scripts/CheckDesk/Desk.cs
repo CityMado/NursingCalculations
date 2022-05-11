@@ -15,7 +15,7 @@ public class Desk : MonoBehaviour
     //this can be used to set the time how long it takes for the indicator to turn back into the normal material
     public int waitTime = 5;
     // Ampulle GameObject
-    public GameObject Ampulle;
+    public GameObject Ampulle, towel;
     public bool correctMedicine, wrongMedicine;
     
     private void Awake()
@@ -28,6 +28,7 @@ public class Desk : MonoBehaviour
         
         //ampulle isnot active when the game starts // add the object in the unity
         Ampulle.SetActive(false);
+        towel.SetActive(false);
     }
     //keeping it simple: checks if the tag is set to correct one and changes material to correct one. After both it starts the MatCountDown coroutine
     //which waits for set amount of time (waitTime) until it changes the material back to basic. 
