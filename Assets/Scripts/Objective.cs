@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -48,6 +48,13 @@ public class Objective : MonoBehaviour
                 {
                     isCompleted = false;
                     playerTries -= 1;
+                }
+                break;
+            case ObjectiveType.ChooseSyringe:
+                if(Desk.singleton.correctSyringe)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
                 }
                 break;
 

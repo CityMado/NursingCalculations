@@ -1614,6 +1614,54 @@ Transform:
   m_Father: {fileID: 151353854}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 74.713, y: -8.445, z: -12.862}
+--- !u!1 &910439309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5933764079269195016, guid: 409e965dc71d9e64d902c96bb1f1d9b3, type: 3}
+  m_PrefabInstance: {fileID: 8716261433419778767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &910439313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910439309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0020924946, y: 0.0036240597, z: 0.00021721442}
+  m_Center: {x: 0.00014889323, y: -0.0003150812, z: 0.00030010508}
+--- !u!1 &916273146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1050957804252417213, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
+  m_PrefabInstance: {fileID: 1860776044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &916273151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916273146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 7
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 1092276172}
+  restartLevel: {fileID: 847193721}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!114 &948394864 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7618405516503819001, guid: 2f94427b8dd14ea498fd92aee3ec9f0f, type: 3}
@@ -3928,6 +3976,10 @@ PrefabInstance:
       propertyPath: collidedObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1050957804252417213, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
+      propertyPath: m_Name
+      value: CheckAreaSyringe
+      objectReference: {fileID: 0}
     - target: {fileID: 1050957805350245616, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4155,7 +4207,7 @@ MonoBehaviour:
   audioSource: {fileID: 1983598418}
   restartLevel: {fileID: 0}
   isCompleted: 0
-  currentObjective: 0
+  currentObjective: 1
   objectiveFailed: 0
   playerCanTry: 1
   title: 
@@ -5039,36 +5091,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[0]
       value: 
-      objectReference: {fileID: 2151305286717420325}
+      objectReference: {fileID: 1983598419}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[1]
       value: 
-      objectReference: {fileID: 1983598419}
+      objectReference: {fileID: 1092276173}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[2]
       value: 
-      objectReference: {fileID: 1092276173}
+      objectReference: {fileID: 2151305286717420325}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[3]
       value: 
-      objectReference: {fileID: 1269821958}
+      objectReference: {fileID: 7993885246962688393}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[4]
       value: 
-      objectReference: {fileID: 7993885246962688393}
+      objectReference: {fileID: 2920255398293492342}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[5]
       value: 
-      objectReference: {fileID: 2920255398293492342}
+      objectReference: {fileID: 2185870325340426218}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[6]
       value: 
-      objectReference: {fileID: 2185870325340426218}
+      objectReference: {fileID: 1269821958}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[7]
+      value: 
+      objectReference: {fileID: 916273151}
     - target: {fileID: 1069385877691561305, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -5278,7 +5334,7 @@ GameObject:
   - component: {fileID: 1811370551427319909}
   m_Layer: 0
   m_Name: SyringeBig
-  m_TagString: Untagged
+  m_TagString: CorrectSyringe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5629,7 +5685,7 @@ MonoBehaviour:
   audioSource: {fileID: 2151305286717420324}
   restartLevel: {fileID: 0}
   isCompleted: 0
-  currentObjective: 1
+  currentObjective: 0
   objectiveFailed: 0
   playerCanTry: 1
   title: 

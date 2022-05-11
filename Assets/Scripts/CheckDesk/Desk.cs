@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
+    public enum SubObjective {Syringe, Medicine}
+    public SubObjective subObjective;
     public static Desk singleton;
     //desk collider is the collider that detects which item is placed on the desk. 
     public Collider deskCollider;
@@ -16,7 +18,7 @@ public class Desk : MonoBehaviour
     public int waitTime = 5;
     // Ampulle GameObject
     public GameObject Ampulle, towel;
-    public bool correctMedicine, wrongMedicine;
+    public bool correctMedicine, wrongMedicine, correctSyringe, wrongSyringe;
     
     private void Awake()
     {
@@ -34,6 +36,47 @@ public class Desk : MonoBehaviour
     //which waits for set amount of time (waitTime) until it changes the material back to basic. 
     private void OnTriggerEnter(Collider other)
     {
+        
+        switch(subObjective)
+        {
+            case SubObjective.Medicine:
+                if(other.tag == "Correct")
+                    {
+                     indicator.GetComponent<MeshRenderer>().material = rightMat;
+                     StartCoroutine(MatCountDown(waitTime));
+                     correctMedicine = true;
+                     wrongMedicine = false;
+                    }
+                if(other.tag == "Wrong")
+                    {
+                     indicator.GetComponent<MeshRenderer>().material = wrongMat;
+                     collidedObject = other.gameObject;
+                     StartCoroutine(MatCountDown(waitTime));
+                     correctMedicine = false;
+                     wrongMedicine = true;
+                    }
+            break;
+            case SubObjective.Syringe:
+            {
+                if(other.tag == "CorrectSyringe")
+                {
+                    indicator.GetComponent<MeshRenderer>().material = rightMat;
+                    StartCoroutine(MatCountDown(waitTime));
+                    correctSyringe = true;
+                    wrongSyringe = false;
+                }
+                if(other.tag == "Wrong")
+                {
+                    indicator.GetComponent<MeshRenderer>().material = wrongMat;
+                    collidedObject = other.gameObject;
+                    StartCoroutine(MatCountDown(waitTime));
+                    correctSyringe = false;
+                    wrongSyringe = true;
+                }
+            }
+            break;
+        }
+
         if(other.tag == "Correct")
         {
             indicator.GetComponent<MeshRenderer>().material = rightMat;

@@ -10,6 +10,7 @@ TagManager:
   - Towel
   - Disinfectant
   - Desk
+  - CorrectSyringe
   layers:
   - Default
   - TransparentFX
