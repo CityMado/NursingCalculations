@@ -6,6 +6,9 @@ using System;
 public class CalculatorScript : MonoBehaviour
 {
     public static CalculatorScript singleton;
+    public enum SubObjective{Gensymicin, Solution}
+    public SubObjective subObjective;
+
     public float input, input2;
     public float result;
     [SerializeField] private string operation;
@@ -15,7 +18,7 @@ public class CalculatorScript : MonoBehaviour
     public bool checkResult = false;
     public string currentInput;
     public string selectedOperator;
-    public float correctAnswer;
+    public float correctAnswer, correctSolution;
     
     private void Awake()
     {

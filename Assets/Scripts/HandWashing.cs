@@ -6,6 +6,7 @@ public class HandWashing : MonoBehaviour
 {
     public enum HandSide {Right, Left}
     public HandSide handSide;
+    public Objective objective;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,10 +15,16 @@ public class HandWashing : MonoBehaviour
             switch (handSide)
             {
                 case HandSide.Right:
-                    MultipleObjectiveChecker.singleton.rightHandWashed = true;
+                    if(objective.currentObjective)
+                    {
+                     MultipleObjectiveChecker.singleton.rightHandWashed = true;
+                    }
                     break;
                 case HandSide.Left:
-                    MultipleObjectiveChecker.singleton.leftHandWashed = true;
+                    if(objective.currentObjective)
+                    {
+                     MultipleObjectiveChecker.singleton.leftHandWashed = true;
+                    }
                     break;
             }
             

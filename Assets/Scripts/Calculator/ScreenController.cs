@@ -49,14 +49,19 @@ public class ScreenController : MonoBehaviour
     {
      if(CalculatorScript.singleton.checkResult)
      {
-        if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctAnswer)
-        {
-            feedback.text = "You got the correct answer";
-            inputUp.text = null;
-            result.text = CalculatorScript.singleton.result.ToString();
-            StartCoroutine(AutomaticScreenClear(waitTime));
+        switch (CalculatorScript.singleton.subObjective)
+         {
+        case CalculatorScript.SubObjective.Gensymicin:
+            if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctAnswer)
+            {
+             feedback.text = "You got the correct answer";
+             inputUp.text = null;
+             result.text = CalculatorScript.singleton.result.ToString();
+             StartCoroutine(AutomaticScreenClear(waitTime));
+            CalculatorScript.singleton.subObjective = CalculatorScript.SubObjective.Solution;
 
-        }
+
+            }
         if(CalculatorScript.singleton.result != CalculatorScript.singleton.correctAnswer)
         {
             if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctAnswer)
@@ -72,8 +77,37 @@ public class ScreenController : MonoBehaviour
                 inputUp.text = null;
                 result.text = CalculatorScript.singleton.result.ToString();
                 StartCoroutine(AutomaticScreenClear(waitTime));
-            }           
-        }
+            }            
+         }
+         break;
+         case CalculatorScript.SubObjective.Solution:
+            if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctSolution)
+            {
+             feedback.text = "You got the correct answer";
+             inputUp.text = null;
+             result.text = CalculatorScript.singleton.result.ToString();
+             StartCoroutine(AutomaticScreenClear(waitTime));
+
+            }
+        if(CalculatorScript.singleton.result != CalculatorScript.singleton.correctSolution)
+        {
+            if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctSolution)
+            {
+                feedback.text = "Answer is more than needed";
+                inputUp.text = null;      
+                result.text = CalculatorScript.singleton.result.ToString();          
+                StartCoroutine(AutomaticScreenClear(waitTime));
+            }
+            if(CalculatorScript.singleton.result < CalculatorScript.singleton.correctSolution)
+            {
+                feedback.text = "Answer is less than needed";
+                inputUp.text = null;
+                result.text = CalculatorScript.singleton.result.ToString();
+                StartCoroutine(AutomaticScreenClear(waitTime));
+            }            
+         }
+         break;        
+     }
      } else feedback.text = null;
     }
     private IEnumerator AutomaticScreenClear(float seconds)

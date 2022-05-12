@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -37,14 +37,14 @@ public class Objective : MonoBehaviour
         switch (objectiveType)
         {
             case ObjectiveType.PickCorrect:
-                if(Desk.singleton.correctMedicine && playerCanTry)
+                if(Desk.singleton.correctMedicine && playerCanTry && currentObjective)
                 {
                     isCompleted = true;
                     Desk.singleton.Ampulle.SetActive(true);
                     Desk.singleton.towel.SetActive(true);
                     audioSource.PlayOneShot(correctSound);
                 }
-                if(Desk.singleton.wrongMedicine && playerCanTry)
+                if(Desk.singleton.wrongMedicine && playerCanTry && currentObjective)
                 {
                     isCompleted = false;
                     playerTries -= 1;
@@ -59,12 +59,12 @@ public class Objective : MonoBehaviour
                 break;
 
             case ObjectiveType.Calculate:
-                if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctAnswer)
+                if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctAnswer && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
-                if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctAnswer)
+                if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctAnswer && currentObjective)
                 {
                     isCompleted = false;
                     if(!audioSource.isPlaying)
@@ -80,11 +80,34 @@ public class Objective : MonoBehaviour
                     {
                         audioSource.PlayOneShot(wrongSound);
                     }
-                } */
-                
+                } */               
+                break;
+            case ObjectiveType.CalculateSolution:
+                if(CalculatorScript.singleton.result == CalculatorScript.singleton.correctSolution && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                if(CalculatorScript.singleton.result > CalculatorScript.singleton.correctSolution && currentObjective)
+                {
+                    isCompleted = false;
+                    if(!audioSource.isPlaying)
+                    {
+                        audioSource.PlayOneShot(voiceOver);
+                    }
+                }
+               /* 
+               if(CalculatorScript.singleton.result < CalculatorScript.singleton.correctAnswer)
+                {
+                    isCompleted = false;
+                    if(!audioSource.isPlaying)
+                    {
+                        audioSource.PlayOneShot(wrongSound);
+                    }
+                } */               
                 break;
             case ObjectiveType.BreakAmpulle:
-                if(AmpulleScript.singleton.isBroken)
+                if(AmpulleScript.singleton.isBroken && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -92,7 +115,7 @@ public class Objective : MonoBehaviour
                 break;
             case ObjectiveType.UseTowelOnAmpule:
             {
-                if(MultipleObjectiveChecker.singleton.hasCleanedAmpulle)
+                if(MultipleObjectiveChecker.singleton.hasCleanedAmpulle && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -101,7 +124,7 @@ public class Objective : MonoBehaviour
             }
             case ObjectiveType.UseTowelOnDesk:
             {
-                if(MultipleObjectiveChecker.singleton.hasCleanedTable)
+                if(MultipleObjectiveChecker.singleton.hasCleanedTable && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -110,7 +133,7 @@ public class Objective : MonoBehaviour
             }
             case ObjectiveType.DestroyAmpulle:
             {
-                if(YellowBox.singleton.ampulleDestroyed)
+                if(YellowBox.singleton.ampulleDestroyed && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -119,7 +142,7 @@ public class Objective : MonoBehaviour
             }
             case ObjectiveType.WashHands:
                 
-                if(MultipleObjectiveChecker.singleton.rightHandWashed && MultipleObjectiveChecker.singleton.leftHandWashed)
+                if(MultipleObjectiveChecker.singleton.rightHandWashed && MultipleObjectiveChecker.singleton.leftHandWashed && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);

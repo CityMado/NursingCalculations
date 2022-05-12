@@ -7,6 +7,7 @@ public class TowelScript : MonoBehaviour
 
 public enum SubObjective {Desk, Ampulle}
 public SubObjective subObjective;
+public Objective objective;
 
 private void Start()
 {
@@ -21,7 +22,7 @@ private void Start()
         {
             case SubObjective.Desk:
             {
-                    if(other.tag == "Desk")
+                    if(other.tag == "Desk" && objective.currentObjective)
                     {
                         MultipleObjectiveChecker.singleton.hasCleanedTable = true;
                         //Destroy(gameObject, 5);
@@ -30,7 +31,7 @@ private void Start()
                 break;
             case SubObjective.Ampulle:
                 {
-                    if(other.tag == "ampulle")
+                    if(other.tag == "ampulle"  && objective.currentObjective)
                     {
                         MultipleObjectiveChecker.singleton.hasCleanedAmpulle = true;
                        // Destroy(gameObject, 5);
