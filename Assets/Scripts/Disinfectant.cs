@@ -7,6 +7,8 @@ public class Disinfectant : MonoBehaviour
 {
     public GameObject SpawnItem;  //Choose what to spawn
     [SerializeField] Vector3 spawnPos = new Vector3(0, 1, -7); //where to spawn
+    //instead of giving these coordinates we can just adjust it in the editor using a gameobject. It's easier and faster!
+    [SerializeField] GameObject spawnPosition;
     
     //[SerializeField] string strTag; // Choose what needs to collide with
 
@@ -52,7 +54,7 @@ public class Disinfectant : MonoBehaviour
 
         for (int i = 0; i < numParticles; i++)
        {
-           Instantiate(SpawnItem, spawnPos, SpawnItem.transform.rotation);
+           Instantiate(SpawnItem, spawnPosition.transform.position, SpawnItem.transform.rotation);
            i++;
            
         }
