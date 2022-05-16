@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -143,6 +143,13 @@ public class Objective : MonoBehaviour
             case ObjectiveType.WashHands:
                 
                 if(MultipleObjectiveChecker.singleton.rightHandWashed && MultipleObjectiveChecker.singleton.leftHandWashed && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            case ObjectiveType.WashHands2nd:
+                if(MultipleObjectiveChecker.singleton.rightHandSecondWash && MultipleObjectiveChecker.singleton.leftHandSecondWash)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
