@@ -12,6 +12,8 @@ TagManager:
   - Desk
   - CorrectSyringe
   - DoorHandle
+  - Perfursor
+  - Needle
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -157,6 +157,13 @@ public class Objective : MonoBehaviour
                 break;
             case ObjectiveType.AttachPerfusor:
                 if(PerfursorScript.singleton.perfursorAttached)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            case ObjectiveType.AttachNeedle:
+                if(PerfursorScript.singleton.syringeAttached)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
