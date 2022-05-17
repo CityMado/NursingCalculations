@@ -11,6 +11,7 @@ TagManager:
   - Disinfectant
   - Desk
   - CorrectSyringe
+  - DoorHandle
   layers:
   - Default
   - TransparentFX
