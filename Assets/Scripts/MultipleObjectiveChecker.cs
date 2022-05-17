@@ -9,6 +9,8 @@ public class MultipleObjectiveChecker : MonoBehaviour
     public bool hasCleanedTable = false;
     public bool leftHandWashed = false;
     public bool rightHandWashed = false;
+    public bool leftHandSecondWash = false;
+    public bool rightHandSecondWash = false;
 
 
     private void Awake()
