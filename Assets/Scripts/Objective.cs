@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle, OpenBottle, AttachFilterNeedle}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -149,14 +149,35 @@ public class Objective : MonoBehaviour
                 }
                 break;
             case ObjectiveType.WashHands2nd:
-                if(MultipleObjectiveChecker.singleton.rightHandSecondWash && MultipleObjectiveChecker.singleton.leftHandSecondWash)
+                if(MultipleObjectiveChecker.singleton.rightHandSecondWash && MultipleObjectiveChecker.singleton.leftHandSecondWash && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
             case ObjectiveType.AttachPerfusor:
-                if(PerfursorScript.singleton.perfursorAttached)
+                if(PerfursorScript.singleton.perfursorAttached && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            case ObjectiveType.AttachNeedle:
+                if(PerfursorScript.singleton.syringeAttached && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            case ObjectiveType.OpenBottle:
+                if(AmpulleScript.singleton.isBroken && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            case ObjectiveType.AttachFilterNeedle:
+                if(PerfursorScript.singleton.needleFilterAttached && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
