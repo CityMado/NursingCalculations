@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowelScript : MonoBehaviour
 {
 
-public enum SubObjective {Desk, Ampulle}
+public enum SubObjective {Desk, Ampulle, Glucose}
 public SubObjective subObjective;
 public Objective objective;
 
@@ -38,6 +38,14 @@ private void Start()
                     }
                 }
                 break;
+            case SubObjective.Glucose:
+            {
+                if(other.tag == "Glucose" && objective.currentObjective)
+                {
+                    MultipleObjectiveChecker.singleton.hasCleanedGlucose = true;
+                }
+            }
+            break;
         }
             
 

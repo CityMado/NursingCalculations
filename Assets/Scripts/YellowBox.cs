@@ -6,6 +6,7 @@ public class YellowBox : MonoBehaviour
 {
     public static YellowBox singleton;
     public bool ampulleDestroyed = false;
+    public bool needleFilterDestroyed = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -18,5 +19,10 @@ public class YellowBox : MonoBehaviour
             ampulleDestroyed = true;
             Destroy(other.gameObject);
         }  
+        if(other.tag == "NeedleFilter")
+        {
+            needleFilterDestroyed = true;
+            Destroy(other.gameObject);
+        }
     }
 }

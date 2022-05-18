@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle, OpenBottle, AttachFilterNeedle}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle, OpenBottle, AttachFilterNeedle, UseTowelOnGlucose, ChangeNeedle, TakeMedicine, TransferMedicine}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -131,6 +131,15 @@ public class Objective : MonoBehaviour
                 }
                 break;
             }
+            case ObjectiveType.UseTowelOnGlucose:
+            {
+                if(MultipleObjectiveChecker.singleton.hasCleanedGlucose && currentObjective)
+                {
+                    isCompleted = true;
+                    audioSource.PlayOneShot(correctSound);
+                }
+                break;
+            }
             case ObjectiveType.DestroyAmpulle:
             {
                 if(YellowBox.singleton.ampulleDestroyed && currentObjective)
@@ -183,6 +192,28 @@ public class Objective : MonoBehaviour
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
+            case ObjectiveType.ChangeNeedle:
+            if(YellowBox.singleton.needleFilterDestroyed && PerfursorScript.singleton.syringeAttached && currentObjective)
+            {
+                isCompleted = true;
+                audioSource.PlayOneShot(correctSound);
+            }
+            break;
+            case ObjectiveType.TakeMedicine:
+            if(SyringeScript.singleton.drugTaken && currentObjective)
+            {
+                isCompleted = true;
+                audioSource.PlayOneShot(correctSound);
+            }
+            break;
+            case ObjectiveType.TransferMedicine:
+            if(SyringeScript.singleton.drugTransfered && currentObjective)
+            {
+                isCompleted = true;
+                audioSource.PlayOneShot(correctSound);
+            }
+            break;
+
         }
         
     }

@@ -7,6 +7,7 @@ public class PerfursorScript : MonoBehaviour
     public static PerfursorScript singleton;
     public GameObject attachPoint;
     public GameObject attachedItem;
+    public GameObject needle;
     public bool perfursorAttached = false;
     public bool syringeAttached = false;
     public bool needleFilterAttached = false;
@@ -14,6 +15,10 @@ public class PerfursorScript : MonoBehaviour
     private void Awake()
     {
         singleton = this;
+    }
+    private void Start()
+    {
+        needle = null;    
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -23,8 +28,6 @@ public class PerfursorScript : MonoBehaviour
             Destroy(other.gameObject);
             var newPerfursor = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newPerfursor.transform.parent = attachPoint.transform;
-
-            //other.gameObject.transform.position = attachPoint.transform.position;
         }
         if(other.gameObject.tag == "Needle")
         {
@@ -39,6 +42,19 @@ public class PerfursorScript : MonoBehaviour
             Destroy(other.gameObject);
             var newFilter = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newFilter.transform.parent = attachPoint.transform;
+            needle = newFilter;
         } 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "NeedleFilter")
+        {
+            Debug.Log("separated");
+            if(needle != null)
+            {
+                needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                needle.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            }
+        }
     }
 }
