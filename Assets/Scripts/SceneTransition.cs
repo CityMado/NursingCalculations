@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public Animator transition;
+    //public Animator transition;
     private float waitTimer = 0.5f;
     private void OnTriggerEnter(Collider other)
     {

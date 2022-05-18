@@ -627,7 +627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &424208721 stripped
 Transform:
@@ -1132,11 +1132,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebaa5965b04f6374796a8c9eef98a79d, type: 3}
---- !u!95 &771805729 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2960261110253082250, guid: 0215b25766da24e438bd6fa111ad75ef, type: 3}
-  m_PrefabInstance: {fileID: 2960261109481276587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798513908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,7 +4767,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2130850630
 MonoBehaviour:
@@ -4786,7 +4781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fca9c4301fea84f81e4a7fc2156ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 771805729}
 --- !u!1 &34031345457116403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7076,6 +7070,10 @@ PrefabInstance:
     - target: {fileID: 2960261109941882579, guid: 0215b25766da24e438bd6fa111ad75ef, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960261109941882579, guid: 0215b25766da24e438bd6fa111ad75ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0215b25766da24e438bd6fa111ad75ef, type: 3}
