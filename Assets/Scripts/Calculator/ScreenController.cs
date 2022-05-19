@@ -58,7 +58,7 @@ public class ScreenController : MonoBehaviour
              inputUp.text = null;
              result.text = CalculatorScript.singleton.result.ToString();
              StartCoroutine(AutomaticScreenClear(waitTime));
-            CalculatorScript.singleton.subObjective = CalculatorScript.SubObjective.Solution;
+             StartCoroutine(ChangeObjective(waitTime));
 
 
             }
@@ -121,6 +121,18 @@ public class ScreenController : MonoBehaviour
             }
              CalculatorScript.singleton.result = 0;
              CalculatorScript.singleton.checkResult = false;
+        }
+    }
+    private IEnumerator ChangeObjective(float seconds)
+    {
+        float counter = seconds;
+        {
+            while (counter > 0)
+            {
+                yield return new WaitForSeconds(1);
+                counter--;
+            }
+            CalculatorScript.singleton.subObjective = CalculatorScript.SubObjective.Solution;
         }
     }
 }
