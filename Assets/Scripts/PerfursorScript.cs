@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PerfursorScript : MonoBehaviour
 {
-    public MultipleObjectiveChecker multiple;
     public GameObject attachPoint;
     public GameObject attachedItem;
     public GameObject needle;
@@ -17,21 +16,21 @@ public class PerfursorScript : MonoBehaviour
     {
          if(other.gameObject.tag == "Perfursor")
         {
-            multiple.perfursorAttached = true;
+            MultipleObjectiveChecker.singleton.perfursorAttached = true;
             Destroy(other.gameObject);
             var newPerfursor = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newPerfursor.transform.parent = attachPoint.transform;
         }
         if(other.gameObject.tag == "Needle")
         {
-            multiple.needleAttached = true;
+            MultipleObjectiveChecker.singleton.needleAttached = true;
             Destroy(other.gameObject);
             var newSyringe = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newSyringe.transform.parent = attachPoint.transform;
         }  
         if(other.gameObject.tag == "NeedleFilter")
         {
-            multiple.needleFilterAttached = true;
+            MultipleObjectiveChecker.singleton.needleFilterAttached = true;
             Destroy(other.gameObject);
             var newFilter = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newFilter.transform.parent = attachPoint.transform;

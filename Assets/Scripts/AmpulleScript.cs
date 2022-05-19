@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AmpulleScript : MonoBehaviour
 {
-    public MultipleObjectiveChecker multiple;
     public GameObject topPart;
 
     // Start is called before the first frame update
@@ -14,14 +13,14 @@ public class AmpulleScript : MonoBehaviour
         if(other.tag == "ampulle")
         {
             Debug.Log("separated");
-            multiple.isBrokenAmpulle = true;
+            MultipleObjectiveChecker.singleton.isBrokenAmpulle = true;
             topPart.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             topPart.gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
         if(other.tag == "GlucoseTop")
         {
             Debug.Log("separated");
-            multiple.isBrokenGlucose = true;
+            MultipleObjectiveChecker.singleton.isBrokenGlucose = true;
             topPart.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             topPart.gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
