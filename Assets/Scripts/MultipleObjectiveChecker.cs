@@ -17,6 +17,7 @@ public class MultipleObjectiveChecker : MonoBehaviour
     public bool drugTransfered = false;
     public bool perfursorAttached = false;
     public bool needleAttached = false;
+    public bool needleRemoved = false;
     public bool needleFilterAttached = false;
     public bool isBrokenAmpulle = false;
     public bool isBrokenGlucose = false;

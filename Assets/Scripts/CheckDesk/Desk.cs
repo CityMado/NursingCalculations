@@ -16,6 +16,7 @@ public class Desk : MonoBehaviour
     public GameObject indicator, collidedObject;
     //this can be used to set the time how long it takes for the indicator to turn back into the normal material
     public int waitTime = 5;
+    public int waitForChange = 1;
     // Ampulle GameObject
     public GameObject Ampulle, towel;
     public bool correctMedicine, wrongMedicine, correctSyringe, wrongSyringe, corretBigSyringe, wrongBigSyringe;
@@ -45,6 +46,7 @@ public class Desk : MonoBehaviour
                      indicator.GetComponent<MeshRenderer>().material = rightMat;
                      StartCoroutine(MatCountDown(waitTime));
                      correctMedicine = true;
+                     StartCoroutine(ChangeSubObjective(waitForChange));
                      wrongMedicine = false;
                     }
                 if(other.tag == "Wrong")
@@ -58,11 +60,12 @@ public class Desk : MonoBehaviour
             break;
             case SubObjective.Syringe:
             {
-                if(other.tag == "SyringeSmall")
+                if(other.tag == "SmallSyringe")
                 {
                     indicator.GetComponent<MeshRenderer>().material = rightMat;
                     StartCoroutine(MatCountDown(waitTime));
                     correctSyringe = true;
+                    StartCoroutine(ChangeSubObjective(waitForChange));
                     wrongSyringe = false;
                 }
                 if(other.tag == "Wrong")
@@ -77,7 +80,7 @@ public class Desk : MonoBehaviour
             break;
             case SubObjective.BigSyringe:
             {
-                if(other.tag == "CorrectSyrnge")
+                if(other.tag == "CorrectSyringe")
                 {
                     indicator.GetComponent<MeshRenderer>().material = rightMat;
                     StartCoroutine(MatCountDown(waitTime));
@@ -131,8 +134,41 @@ public class Desk : MonoBehaviour
                 counter--;
             }
             ChangeMaterialBack();
+            switch (subObjective)
+            {
+                case SubObjective.Medicine:
+                    if(correctMedicine)
+                    subObjective = SubObjective.Syringe;
+                    break;
+                case SubObjective.Syringe:
+                    if(correctSyringe)
+                    subObjective = SubObjective.BigSyringe;
+                    break;
+            }
         }
     }
-    
+    private IEnumerator ChangeSubObjective(int subObjectivesSeconds)
+    {
+            int counter = subObjectivesSeconds;
+        {
+            while (counter > 0)
+            {
+                yield return new WaitForSeconds(1);
+                counter--;
+            }
+            switch (subObjective)
+            {
+                case SubObjective.Medicine:
+                    if(correctMedicine)
+                    subObjective = SubObjective.Syringe;
+                    break;
+                case SubObjective.Syringe:
+                    if(correctSyringe)
+                    subObjective = SubObjective.BigSyringe;
+                    break;
+            }
+
+    }
+    }  
     
 }

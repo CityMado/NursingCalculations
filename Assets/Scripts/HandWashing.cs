@@ -15,27 +15,21 @@ public class HandWashing : MonoBehaviour
             switch (handSide)
             {
                 case HandSide.Right:
-                    if(objective.currentObjective)
-                    {
                      MultipleObjectiveChecker.singleton.rightHandWashed = true;
                      handSide = HandSide.Right2;
-                    }
                     break;
                 case HandSide.Left:
-                    if(objective.currentObjective)
-                    {
                      MultipleObjectiveChecker.singleton.leftHandWashed = true;
                      handSide = HandSide.Left2;
-                    }
                     break;
                 case HandSide.Right2:
-                if(objective.currentObjective)
+                if(objective.currentObjective && objective.objectiveType == Objective.ObjectiveType.WashHands2nd)
                 {
                     MultipleObjectiveChecker.singleton.rightHandSecondWash = true;
                 }
                 break;
                 case HandSide.Left2:
-                if(objective.currentObjective)
+                if(objective.currentObjective && objective.objectiveType == Objective.ObjectiveType.WashHands2nd)
                 {
                     MultipleObjectiveChecker.singleton.leftHandSecondWash = true;
                 }

@@ -24,5 +24,9 @@ public class YellowBox : MonoBehaviour
             needleFilterDestroyed = true;
             Destroy(other.gameObject);
         }
+        if(other.tag == "Needle")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

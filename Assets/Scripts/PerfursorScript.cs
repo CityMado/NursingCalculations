@@ -47,14 +47,17 @@ public class PerfursorScript : MonoBehaviour
             {
                 needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 needle.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                needle = null;
             }
         }
         if(other.tag == "Needle")
         {
             if(needle != null)
             {
+                MultipleObjectiveChecker.singleton.needleRemoved = true;
                 needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 needle.gameObject.GetComponent<Rigidbody>().useGravity = true; 
+                needle = null;
             }
         }
     }

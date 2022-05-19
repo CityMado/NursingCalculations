@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2967351175342462853}
   - component: {fileID: 2478658201710513470}
+  - component: {fileID: 217216985217327147}
   m_Layer: 0
   m_Name: NeedleFilterAttached
   m_TagString: NeedleFilter
@@ -46,6 +47,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13650894, y: 1.186986, z: 0.16027606}
   m_Center: {x: -0.0068855286, y: 0.61279297, z: -0.035381235}
+--- !u!114 &217216985217327147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478658201710513471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8becd6f836c1448e80eddd49d7fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7876382232219504443
 GameObject:
   m_ObjectHideFlags: 0
