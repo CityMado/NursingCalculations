@@ -15,6 +15,7 @@ TagManager:
   - Perfursor
   - Needle
   - NeedleFilter
+  - SmallSyringe
   layers:
   - Default
   - TransparentFX

@@ -58,7 +58,7 @@ public class Desk : MonoBehaviour
             break;
             case SubObjective.Syringe:
             {
-                if(other.tag == "CorrectSyringe")
+                if(other.tag == "SyringeSmall")
                 {
                     indicator.GetComponent<MeshRenderer>().material = rightMat;
                     StartCoroutine(MatCountDown(waitTime));
