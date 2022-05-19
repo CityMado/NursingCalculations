@@ -40,7 +40,7 @@ private void Start()
                 break;
             case SubObjective.Glucose:
             {
-                if(other.tag == "Glucose" && objective.currentObjective)
+                if(other.tag == "Glucose"  && objective.currentObjective)
                 {
                     MultipleObjectiveChecker.singleton.hasCleanedGlucose = true;
                 }

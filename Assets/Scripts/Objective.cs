@@ -107,7 +107,7 @@ public class Objective : MonoBehaviour
                 } */               
                 break;
             case ObjectiveType.BreakAmpulle:
-                if(AmpulleScript.singleton.isBroken && currentObjective)
+                if(MultipleObjectiveChecker.singleton.isBrokenAmpulle && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
@@ -165,49 +165,49 @@ public class Objective : MonoBehaviour
                 }
                 break;
             case ObjectiveType.AttachPerfusor:
-                if(PerfursorScript.singleton.perfursorAttached && currentObjective)
+                if(MultipleObjectiveChecker.singleton.perfursorAttached && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
             case ObjectiveType.AttachNeedle:
-                if(PerfursorScript.singleton.syringeAttached && currentObjective)
+                if(MultipleObjectiveChecker.singleton.needleAttached && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
             case ObjectiveType.OpenBottle:
-                if(AmpulleScript.singleton.isBroken && currentObjective)
+                if(MultipleObjectiveChecker.singleton.isBrokenGlucose && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
             case ObjectiveType.AttachFilterNeedle:
-                if(PerfursorScript.singleton.needleFilterAttached && currentObjective)
+                if(MultipleObjectiveChecker.singleton.needleFilterAttached && currentObjective)
                 {
                     isCompleted = true;
                     audioSource.PlayOneShot(correctSound);
                 }
                 break;
             case ObjectiveType.ChangeNeedle:
-            if(YellowBox.singleton.needleFilterDestroyed && PerfursorScript.singleton.syringeAttached && currentObjective)
+            if(YellowBox.singleton.needleFilterDestroyed && MultipleObjectiveChecker.singleton.needleAttached && currentObjective)
             {
                 isCompleted = true;
                 audioSource.PlayOneShot(correctSound);
             }
             break;
             case ObjectiveType.TakeMedicine:
-            if(SyringeScript.singleton.drugTaken && currentObjective)
+            if(MultipleObjectiveChecker.singleton.drugTaken && currentObjective)
             {
                 isCompleted = true;
                 audioSource.PlayOneShot(correctSound);
             }
             break;
             case ObjectiveType.TransferMedicine:
-            if(SyringeScript.singleton.drugTransfered && currentObjective)
+            if(MultipleObjectiveChecker.singleton.drugTransfered && currentObjective)
             {
                 isCompleted = true;
                 audioSource.PlayOneShot(correctSound);

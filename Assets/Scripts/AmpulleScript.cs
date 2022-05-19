@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class AmpulleScript : MonoBehaviour
 {
-    public static AmpulleScript singleton;
+    public MultipleObjectiveChecker multiple;
     public GameObject topPart;
-    public bool isBroken = false;
 
     // Start is called before the first frame update
 
-    private void Awake()
-    {
-        singleton = this;
-    }
     private void OnTriggerExit(Collider other) {
         
         if(other.tag == "ampulle")
         {
             Debug.Log("separated");
-            isBroken = true;
+            multiple.isBrokenAmpulle = true;
+            topPart.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            topPart.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        }
+        if(other.tag == "GlucoseTop")
+        {
+            Debug.Log("separated");
+            multiple.isBrokenGlucose = true;
             topPart.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             topPart.gameObject.GetComponent<Rigidbody>().useGravity = true;
         }

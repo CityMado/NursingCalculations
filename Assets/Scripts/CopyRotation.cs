@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CopyRotation : MonoBehaviour
-{
+{ /*
      void Update () {
          if(PerfursorScript.singleton.perfursorAttached)
          {
@@ -12,4 +12,5 @@ public class CopyRotation : MonoBehaviour
              this.transform.eulerAngles = newRotation;
          }
      } 
+     */
 }

@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class SyringeScript : MonoBehaviour
 {
-    public static SyringeScript singleton;
-    public bool drugTaken = false;
-    public bool drugTransfered = false;
-    private void Awake()
-    {
-        singleton = this;
-    }
+    public MultipleObjectiveChecker multiple;
+
   private void OnTriggerEnter(Collider other)
   {
       if(other.tag == "ampulle")
       {
-          drugTaken = true;
+          multiple.drugTaken = true;
       }
       if(other.tag == "CorrectSyringe")
       {
-          drugTransfered = true;
+          multiple.drugTransfered = true;
       }
   }
 }
