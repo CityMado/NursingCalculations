@@ -20,7 +20,7 @@ public class PerfursorScript : MonoBehaviour
         {
             MultipleObjectiveChecker.singleton.perfursorAttached = true;
             Destroy(other.gameObject);
-            var newPerfursor = Instantiate(secondAttachedItem, attachPoint.transform.position, secondAttachedItem.transform.rotation);
+            var newPerfursor = Instantiate(secondAttachedItem, attachPoint.transform.position, transform.rotation);
             newPerfursor.transform.parent = attachPoint.transform;
         }
         if(other.gameObject.tag == "Needle")
@@ -29,7 +29,7 @@ public class PerfursorScript : MonoBehaviour
             Destroy(other.gameObject);
             if(firstNeedleAttached)
             {
-                var newSecondFilter = Instantiate(secondAttachedItem, attachPoint.transform.position, secondAttachedItem.transform.rotation);
+                var newSecondFilter = Instantiate(secondAttachedItem, attachPoint.transform.position, transform.rotation);
                 newSecondFilter.transform.parent = attachPoint.transform;
             }
             if(!firstNeedleAttached)

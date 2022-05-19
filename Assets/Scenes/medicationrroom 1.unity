@@ -856,7 +856,7 @@ PrefabInstance:
     - target: {fileID: 1165279432, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: attachedItem
       value: 
-      objectReference: {fileID: 2221838488327804836, guid: 62e6f55c6d9b6254c9dbdedf7bb07e17, type: 3}
+      objectReference: {fileID: 8491326795624069956, guid: a098e4d252e3b6546a36884f66ae2052, type: 3}
     - target: {fileID: 1165279432, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: attachedPerfursor
       value: 
