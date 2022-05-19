@@ -15,7 +15,7 @@ public class AmpulleScript : MonoBehaviour
             Debug.Log("separated");
             MultipleObjectiveChecker.singleton.isBrokenAmpulle = true;
             topPart.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-            topPart.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            topPart.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
         if(other.tag == "GlucoseTop")
         {

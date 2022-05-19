@@ -28,5 +28,10 @@ public class YellowBox : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if(other.tag == "NeedleBig")
+        {   
+            MultipleObjectiveChecker.singleton.needleRemoved = true;          
+            Destroy(other.gameObject);
+        }
     }
 }

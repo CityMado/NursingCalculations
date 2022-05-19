@@ -6,8 +6,9 @@ public class PerfursorScript : MonoBehaviour
 {
     public Objective objective;
     public GameObject attachPoint;
-    public GameObject attachedItem;
+    public GameObject attachedItem, secondAttachedItem;
     public GameObject needle;
+    public bool firstNeedleAttached = false;
 
     private void Start()
     {
@@ -19,15 +20,23 @@ public class PerfursorScript : MonoBehaviour
         {
             MultipleObjectiveChecker.singleton.perfursorAttached = true;
             Destroy(other.gameObject);
-            var newPerfursor = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
+            var newPerfursor = Instantiate(secondAttachedItem, attachPoint.transform.position, secondAttachedItem.transform.rotation);
             newPerfursor.transform.parent = attachPoint.transform;
         }
         if(other.gameObject.tag == "Needle")
         {
             MultipleObjectiveChecker.singleton.needleAttached = true;
             Destroy(other.gameObject);
-            var newSyringe = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
-            newSyringe.transform.parent = attachPoint.transform;
+            if(firstNeedleAttached)
+            {
+                var newSecondFilter = Instantiate(secondAttachedItem, attachPoint.transform.position, secondAttachedItem.transform.rotation);
+                newSecondFilter.transform.parent = attachPoint.transform;
+            }
+            if(!firstNeedleAttached)
+            {
+                var newSyringe = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
+                newSyringe.transform.parent = attachPoint.transform;
+            }
         }  
         if(other.gameObject.tag == "NeedleFilter")
         {
@@ -36,6 +45,7 @@ public class PerfursorScript : MonoBehaviour
             var newFilter = Instantiate(attachedItem, attachPoint.transform.position, attachPoint.transform.rotation);
             newFilter.transform.parent = attachPoint.transform;
             needle = newFilter;
+            firstNeedleAttached = true;
         } 
     }
     private void OnTriggerExit(Collider other)
@@ -54,7 +64,6 @@ public class PerfursorScript : MonoBehaviour
         {
             if(needle != null)
             {
-                MultipleObjectiveChecker.singleton.needleRemoved = true;
                 needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 needle.gameObject.GetComponent<Rigidbody>().useGravity = true; 
                 needle = null;
