@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PerfursorScript : MonoBehaviour
 {
+    public Objective objective;
     public GameObject attachPoint;
     public GameObject attachedItem;
     public GameObject needle;
@@ -14,7 +15,7 @@ public class PerfursorScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-         if(other.gameObject.tag == "Perfursor")
+         if(other.gameObject.tag == "Perfursor" && objective.objectiveType == Objective.ObjectiveType.AttachPerfusor)
         {
             MultipleObjectiveChecker.singleton.perfursorAttached = true;
             Destroy(other.gameObject);
@@ -46,6 +47,14 @@ public class PerfursorScript : MonoBehaviour
             {
                 needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 needle.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            }
+        }
+        if(other.tag == "Needle")
+        {
+            if(needle != null)
+            {
+                needle.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                needle.gameObject.GetComponent<Rigidbody>().useGravity = true; 
             }
         }
     }

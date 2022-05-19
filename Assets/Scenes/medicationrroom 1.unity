@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &45421669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5972762194591122145, guid: 9b2ad6c02aee2c74aaaa4d07dae0b0d9, type: 3}
+  m_PrefabInstance: {fileID: 8689969124064230794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &45421670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45421669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 15
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 8689969124064230799}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!1 &111369681
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,11 +859,15 @@ PrefabInstance:
       objectReference: {fileID: 6048875306886692399, guid: 5dd5f27fce7351441b310ea9ecc18be8, type: 3}
     - target: {fileID: 4973016760097756537, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: m_Name
-      value: SyringeFilterNeedle
+      value: AttachNeedleBigSyringe
       objectReference: {fileID: 0}
     - target: {fileID: 4973016760097756537, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: m_TagString
       value: CorrectSyringe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5614405327715534909, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
+      propertyPath: m_Name
+      value: TransferMedicine
       objectReference: {fileID: 0}
     - target: {fileID: 5640869350903680963, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: m_RootOrder
@@ -878,6 +912,10 @@ PrefabInstance:
     - target: {fileID: 5640869350903680963, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007013894797189687, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
+      propertyPath: m_Name
+      value: AttachPerfursor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
@@ -1319,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveType: 11
+  objectiveType: 13
   correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
   voiceOver: {fileID: 0}
   wrongSound: {fileID: 0}
@@ -1332,6 +1370,11 @@ MonoBehaviour:
   title: 
   description: 
   playerTries: 3
+--- !u!82 &646657694 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5540849303206469331, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
+  m_PrefabInstance: {fileID: 9105194932320399941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &691504897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1477,6 +1520,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebaa5965b04f6374796a8c9eef98a79d, type: 3}
+--- !u!1 &750479297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8007013894797189687, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
+  m_PrefabInstance: {fileID: 475734751}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &750479298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750479297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 10
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 475734754}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!1 &798513908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,6 +3253,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!1 &1337484031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8489361167387370164, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
+  m_PrefabInstance: {fileID: 9105194932320399941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1337484032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337484031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 19
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 646657694}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!1001 &1391958807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3302,6 +3405,41 @@ PrefabInstance:
       objectReference: {fileID: 455199178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+--- !u!1 &1424580038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5614405327715534909, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
+  m_PrefabInstance: {fileID: 475734751}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424580039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424580038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 17
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 475734754}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
+--- !u!82 &1536291426 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2920255398293492343, guid: f3b07ddb44f15a549b715302f58a6137, type: 3}
+  m_PrefabInstance: {fileID: 1142675178222621561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584898712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3544,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7282e6cbb44d94b9399c80f4c2c7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1622750771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1050957806317152618, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
+  m_PrefabInstance: {fileID: 1860776044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622750772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622750771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 18
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 1092276172}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!1 &1635569012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7825666904624860477, guid: 27025248cfee0d748bdda1f2b008f1f4, type: 3}
@@ -3728,6 +3896,10 @@ PrefabInstance:
     - target: {fileID: 1050957805350245619, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
       propertyPath: m_Name
       value: PickCorrectMedicine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050957806317152618, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
+      propertyPath: m_Name
+      value: PickBigSyringe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9675d4118ce61469815d68ec8b6f65, type: 3}
@@ -4769,6 +4941,31 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 223755927833387622, guid: f3b07ddb44f15a549b715302f58a6137, type: 3}
   m_PrefabInstance: {fileID: 1142675178222621561}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132147635728672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147635728671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc5f51574c5e47b49286fa54c06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 16
+  correctSound: {fileID: 8300000, guid: 2a434a16bf705b844b295ed8c36ddb1c, type: 3}
+  voiceOver: {fileID: 0}
+  wrongSound: {fileID: 0}
+  audioSource: {fileID: 1536291426}
+  restartLevel: {fileID: 0}
+  isCompleted: 0
+  currentObjective: 0
+  objectiveFailed: 0
+  playerCanTry: 1
+  title: 
+  description: 
+  playerTries: 3
 --- !u!1 &919132147730484156
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,7 +5245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.size
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[0]
@@ -5073,43 +5270,63 @@ PrefabInstance:
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[5]
       value: 
-      objectReference: {fileID: 7993885246962688393}
+      objectReference: {fileID: 1622750772}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[6]
       value: 
-      objectReference: {fileID: 3655000508855446679}
+      objectReference: {fileID: 1635569013}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[7]
       value: 
-      objectReference: {fileID: 552114698}
+      objectReference: {fileID: 315516665}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[8]
       value: 
-      objectReference: {fileID: 1081228605}
+      objectReference: {fileID: 3655000508855446679}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[9]
       value: 
-      objectReference: {fileID: 2920255398293492342}
+      objectReference: {fileID: 1081228605}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[10]
       value: 
-      objectReference: {fileID: 2185870325340426218}
+      objectReference: {fileID: 475734753}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[11]
       value: 
-      objectReference: {fileID: 1165279433}
+      objectReference: {fileID: 1337484032}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[12]
       value: 
-      objectReference: {fileID: 1635569013}
+      objectReference: {fileID: 7993885246962688393}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[13]
       value: 
-      objectReference: {fileID: 916273151}
+      objectReference: {fileID: 2920255398293492342}
     - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: objectives.Array.data[14]
       value: 
-      objectReference: {fileID: 315516665}
+      objectReference: {fileID: 2185870325340426218}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[15]
+      value: 
+      objectReference: {fileID: 552114698}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[16]
+      value: 
+      objectReference: {fileID: 919132147635728672}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[17]
+      value: 
+      objectReference: {fileID: 45421670}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[18]
+      value: 
+      objectReference: {fileID: 1424580039}
+    - target: {fileID: 1069385877691561302, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
+      propertyPath: objectives.Array.data[19]
+      value: 
+      objectReference: {fileID: 750479298}
     - target: {fileID: 1069385877691561305, guid: 8c7d6de273f2a25489a14b12b67cae42, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -5136,7 +5353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 223755927833387622, guid: f3b07ddb44f15a549b715302f58a6137, type: 3}
       propertyPath: m_Name
-      value: ampule1
+      value: TakeMedicine
       objectReference: {fileID: 0}
     - target: {fileID: 599295925861873884, guid: f3b07ddb44f15a549b715302f58a6137, type: 3}
       propertyPath: m_RootOrder
@@ -8017,6 +8234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SyringeBig
       objectReference: {fileID: 0}
+    - target: {fileID: 4973016760097756537, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5640869350903680963, guid: 40b0f541d3104dd4cb5f591ecab89ceb, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8893,7 +9114,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4695206234452886158, guid: 9b2ad6c02aee2c74aaaa4d07dae0b0d9, type: 3}
       propertyPath: m_Name
-      value: AttachNeedle
+      value: AttachFilterNeedle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972762194591122145, guid: 9b2ad6c02aee2c74aaaa4d07dae0b0d9, type: 3}
+      propertyPath: m_Name
+      value: ChangeNeedle
       objectReference: {fileID: 0}
     - target: {fileID: 8383891825180788487, guid: 9b2ad6c02aee2c74aaaa4d07dae0b0d9, type: 3}
       propertyPath: m_Name
@@ -8971,6 +9196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ced353ad1b43741863d04981b14b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objective: {fileID: 0}
   attachPoint: {fileID: 229552915}
   attachedItem: {fileID: 3212948745094531106, guid: 3066a45705d9a6648a942505df2f6edd, type: 3}
   needle: {fileID: 0}
@@ -9270,6 +9496,14 @@ PrefabInstance:
     - target: {fileID: 5540849303206469328, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
       propertyPath: m_TagString
       value: GlucoseTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489361167387370164, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
+      propertyPath: m_Name
+      value: TakeSolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489361167387370164, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
+      propertyPath: m_TagString
+      value: GlucoseBot
       objectReference: {fileID: 0}
     - target: {fileID: 8489361167387370167, guid: 7902cc53cf386eb49a6b2ba3e92a9c6e, type: 3}
       propertyPath: multiple

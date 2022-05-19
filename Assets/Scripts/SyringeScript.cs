@@ -9,11 +9,15 @@ public class SyringeScript : MonoBehaviour
   {
       if(other.tag == "ampulle")
       {
-          MultipleObjectiveChecker.singleton.drugTaken = true;
+          MultipleObjectiveChecker.singleton.drugTakenAmpulle = true;
       }
       if(other.tag == "CorrectSyringe")
       {
           MultipleObjectiveChecker.singleton.drugTransfered = true;
+      }
+      if(other.tag == "GlucoseBot")
+      {
+          MultipleObjectiveChecker.singleton.solutionTaken = true;
       }
   }
 }

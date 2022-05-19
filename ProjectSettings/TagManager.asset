@@ -17,6 +17,7 @@ TagManager:
   - NeedleFilter
   - SmallSyringe
   - GlucoseTop
+  - GlucoseBot
   layers:
   - Default
   - TransparentFX

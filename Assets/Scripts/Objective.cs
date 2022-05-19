@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle, OpenBottle, AttachFilterNeedle, UseTowelOnGlucose, ChangeNeedle, TakeMedicine, TransferMedicine}
+    public enum ObjectiveType {PickCorrect, Calculate, BreakAmpulle, UseTowelOnAmpule, UseTowelOnDesk, DestroyAmpulle, WashHands, ChooseSyringe, CalculateSolution, WashHands2nd, AttachPerfusor, AttachNeedle, OpenBottle, AttachFilterNeedle, UseTowelOnGlucose, ChangeNeedle, TakeMedicine, TransferMedicine, ChooseBigSyringe, TakeSolution}
     public ObjectiveType objectiveType;
     public AudioClip correctSound, voiceOver, wrongSound;
     public AudioSource audioSource;
@@ -200,7 +200,7 @@ public class Objective : MonoBehaviour
             }
             break;
             case ObjectiveType.TakeMedicine:
-            if(MultipleObjectiveChecker.singleton.drugTaken && currentObjective)
+            if(MultipleObjectiveChecker.singleton.drugTakenAmpulle && currentObjective)
             {
                 isCompleted = true;
                 audioSource.PlayOneShot(correctSound);
@@ -208,6 +208,20 @@ public class Objective : MonoBehaviour
             break;
             case ObjectiveType.TransferMedicine:
             if(MultipleObjectiveChecker.singleton.drugTransfered && currentObjective)
+            {
+                isCompleted = true;
+                audioSource.PlayOneShot(correctSound);
+            }
+            break;
+            case ObjectiveType.ChooseBigSyringe:
+            if(Desk.singleton.corretBigSyringe && currentObjective)
+            {
+                isCompleted = true;
+                audioSource.PlayOneShot(correctSound);
+            }
+            break;
+            case ObjectiveType.TakeSolution:
+            if(MultipleObjectiveChecker.singleton.solutionTaken && currentObjective)
             {
                 isCompleted = true;
                 audioSource.PlayOneShot(correctSound);

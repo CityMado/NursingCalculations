@@ -12,7 +12,8 @@ public class MultipleObjectiveChecker : MonoBehaviour
     public bool rightHandWashed = false;
     public bool leftHandSecondWash = false;
     public bool rightHandSecondWash = false;
-    public bool drugTaken = false;
+    public bool drugTakenAmpulle = false;
+    public bool solutionTaken = false;
     public bool drugTransfered = false;
     public bool perfursorAttached = false;
     public bool needleAttached = false;

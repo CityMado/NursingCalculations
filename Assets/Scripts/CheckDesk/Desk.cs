@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
-    public enum SubObjective {Syringe, Medicine}
+    public enum SubObjective {Syringe, Medicine, BigSyringe}
     public SubObjective subObjective;
     public static Desk singleton;
     //desk collider is the collider that detects which item is placed on the desk. 
@@ -18,7 +18,7 @@ public class Desk : MonoBehaviour
     public int waitTime = 5;
     // Ampulle GameObject
     public GameObject Ampulle, towel;
-    public bool correctMedicine, wrongMedicine, correctSyringe, wrongSyringe;
+    public bool correctMedicine, wrongMedicine, correctSyringe, wrongSyringe, corretBigSyringe, wrongBigSyringe;
     
     private void Awake()
     {
@@ -75,6 +75,25 @@ public class Desk : MonoBehaviour
                 }
             }
             break;
+            case SubObjective.BigSyringe:
+            {
+                if(other.tag == "CorrectSyrnge")
+                {
+                    indicator.GetComponent<MeshRenderer>().material = rightMat;
+                    StartCoroutine(MatCountDown(waitTime));
+                    corretBigSyringe = true;
+                    wrongBigSyringe = false;
+                }
+                if(other.tag == "Wrong")
+                {
+                    indicator.GetComponent<MeshRenderer>().material = wrongMat;
+                    collidedObject = other.gameObject;
+                    StartCoroutine(MatCountDown(waitTime));
+                    correctSyringe = false;
+                    wrongBigSyringe = true;
+                }
+            break;
+            }
         }
 
         if(other.tag == "Correct")
